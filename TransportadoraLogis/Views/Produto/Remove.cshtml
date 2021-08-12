@@ -3,11 +3,15 @@
 <div class="alert alert-danger d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
     <div>
-        Tem certeza que deseja excluir o pedido #@Model.Id?
+        Tem certeza que deseja excluir o pedido de código #@Model.Codigo?
     </div>
 </div>
 
-<div class="btn-group" role="group" aria-label="Basic outlined example">
-    <a class="btn btn-primary stretched-link" asp-controller="Produto" asp-action="Delete" asp-route-id="@Model.Id">Confirmar</a>
-    <a class="btn btn-primary stretched-link" asp-controller="Produto" asp-action="Produtos">Voltar</a>
+<div class="row">
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <a class="btn btn-primary stretched-link" asp-controller="Produto" asp-action="Delete" asp-route-id="@Model.Id">Confirmar</a>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <a class="btn btn-primary stretched-link" asp-controller="Produto" asp-action="Produtos">Voltar</a>
+    </div>
 </div>

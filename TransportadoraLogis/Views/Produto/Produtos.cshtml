@@ -1,45 +1,70 @@
 ﻿@model List<Produto>
 
-<div class="text-center">
-    <a class="btn btn-secondary btn-lg" asp-controller="Home" asp-action="Inserir">Inserir Produto</a>
-</div>
-<hr />
+<form>
+    <input type="text" name="nome" />
+    <input type="submit" value="Buscar!" />
+</form>
 
-@if (Model.Count() > 10)
-            {
-                <div class="alert alert-success d-flex align-items-center" role="alert">
-                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill" /></svg>
-                    <div>
-                        Cadastro realizado com sucesso!!
-                    </div>
-                </div>
-            }
+<div class="row">
+    <div class="text-center">
+        <a class="btn btn-secondary btn-lg" asp-controller="Produto" asp-action="create">Inserir Produto</a>
+    </div>
+
+<div class="col">
+    @if (ViewBag.ordenado == true)
+    {
+        <a class="btn btn-secondary btn-lg" asp-action="Produto">Remover ordenação</a>
+    }
+    else
+    {
+        <a class="btn btn-secondary btn-lg" href="?ordenar=true">Ordenar por Cliente</a>
+    }
+</div>
+</div>
+
 
 <table class="table table-striped">
     <thead>
         <tr>
             <th scope="col">@Html.DisplayNameFor(Model => Model.First().Codigo)</th>
-            <th scope="col">@Html.DisplayNameFor(Model => Model.First().Cliente)</th>
+            <th scope="col">@Html.DisplayNameFor(Model => Model.First().cliente.Nome)</th>
             <th scope="col">@Html.DisplayNameFor(Model => Model.First().Destino)</th>
             <th scope="col">@Html.DisplayNameFor(Model => Model.First().DataSaida)</th>
             <th scope="col">@Html.DisplayNameFor(Model => Model.First().Quantidade)</th>
             <th scope="col">Ações</th>
-         </tr>
+        </tr>
     </thead>
     <tbody>
         @foreach (Produto p in Model)
         {
-        <tr>
-            <th scope="row">@Html.DisplayFor(Model => p.Codigo)</th>
-            <th scope="row">@Html.DisplayFor(Model => p.Cliente)</th>
-            <th scope="row">@Html.DisplayFor(Model => p.Destino)</th>
-            <th scope="row">@Html.DisplayFor(Model => p.DataSaida)</th>
-            <th scope="row">@Html.DisplayFor(Model => p.Quantidade)</th>
-            <th><a asp-controller="Produto" asp-action="Read" asp-route-id="@p.Id">Detalhes do Pedido</a> | 
-                <a asp-controller="Produto" asp-action="Update" asp-route-id="@p.Id">Editar</a> |                
-                <a asp-controller="Produto" asp-action="Remove" asp-route-id="@p.Id">Excluir</a>                 
-            </th>
-        </tr>
+            <tr>
+                <th scope="row">@Html.DisplayFor(Model => p.Codigo)</th>
+                <th scope="row">@Html.DisplayFor(Model => p.cliente.Nome)</th>
+                <th scope="row">@Html.DisplayFor(Model => p.Destino)</th>
+                <th scope="row">@Html.DisplayFor(Model => p.DataSaida)</th>
+                <th scope="row">@Html.DisplayFor(Model => p.Quantidade)</th>
+                <th>
+                    <a asp-controller="Produto" asp-action="read" asp-route-id="@p.Id">Detalhes do Pedido</a> |
+                    <a asp-controller="Produto" asp-action="update" asp-route-id="@p.Id">Editar</a> |
+                    <a asp-controller="Produto" asp-action="delete" asp-route-id="@p.Id">Excluir</a>
+                </th>
+            </tr>
         }
     </tbody>
 </table>
+
+<div class="row">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Total de pedidos</h5>
+            <p class="card-text">@ViewBag.totalPedidos</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; margin-right: 4px">
+        <div class="card-body">
+            <h5 class="card-title">Qtde Produtos Transportados</h5>
+            <p class="card-text">@ViewBag.totalQuantidade</p>
+        </div>
+    </div>
+</div>

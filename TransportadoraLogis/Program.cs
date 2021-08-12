@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TransportadoraLogis.Data;
 
 namespace TransportadoraLogis
 {
@@ -13,7 +14,10 @@ namespace TransportadoraLogis
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var app = CreateHostBuilder(args).Build();
+            SeedDatabase.Initialize(app);
+            app.Run();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TransportadoraLogis.Data;
+using TransportadoraLogis.Services;
 
 namespace TransportadoraLogis
 {
@@ -24,6 +27,14 @@ namespace TransportadoraLogis
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<ProdutoContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ProdutoString"))
+                );
+
+            services.AddTransient<IProdutoServices, ProdutoSqlService>();
+            services.AddTransient<IClienteService, ClienteService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

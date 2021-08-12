@@ -1,0 +1,46 @@
+﻿@model List<Cliente>
+
+
+<div class="cont1">
+    <div>
+        <a class="btn btn-secondary btn-lg" asp-controller="Produto" asp-action="create">Inserir Produto</a>
+    </div>
+    <div>
+        <form>
+            <input type="text" name="nome" />
+            <input type="submit" value="Buscar!" />
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(Model => Model.First().Nome)</th>
+            <th scope="col">@Html.DisplayNameFor(Model => Model.First().Cidade)</th>
+            <th scope="col">@Html.DisplayNameFor(Model => Model.First().Telefone)</th>
+            <th scope="col">@Html.DisplayNameFor(Model => Model.First().eMail)</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Cliente p in Model)
+        {
+            <tr>
+                <th scope="row">@Html.DisplayFor(Model => p.Nome)</th>
+                <th scope="row">@Html.DisplayFor(Model => p.Cidade)</th>
+                <th scope="row">@Html.DisplayFor(Model => p.Telefone)</th>
+                <th scope="row">@Html.DisplayFor(Model => p.eMail)</th>
+                <th>
+                    <a asp-controller="Cliente" asp-action="read" asp-route-id="@p.Id">Visualizar Cliente</a> |
+                    <a asp-controller="Cliente" asp-action="update" asp-route-id="@p.Id">Editar</a> |
+                    <a asp-controller="Cliente" asp-action="delete" asp-route-id="@p.Id">Excluir</a>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+
+ 
