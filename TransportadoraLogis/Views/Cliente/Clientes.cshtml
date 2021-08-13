@@ -3,19 +3,27 @@
 
 <div class="cont1">
     <div>
-        <a class="btn btn-secondary btn-lg" asp-controller="Produto" asp-action="create">Inserir Produto</a>
+        <a class="btn btn-secondary btn-lg" asp-controller="Cliente" asp-action="create">Inserir Cliente</a>
     </div>
     <div>
         <form>
-            <input type="text" name="nome" />
-            <input type="submit" value="Buscar!" />
+            <input type="text" name="busca" placeholder="--Digite um nome--" />
+            <input type="submit" value="Buscar um cliente" />
         </form>
     </div>
+    @if (ViewBag.ordenado == true)
+    {
+        <a class="btn btn-secondary btn-lg" asp-action="Produtos">Remover ordenação</a>
+    }
+    else
+    {
+        <a class="btn btn-secondary btn-lg" href="?ordenado=true">Ordenar clientes</a>
+    }
 </div>
 
 <hr />
 
-<table class="table table-striped">
+<table class="table table-striped table-hover">
     <thead>
         <tr>
             <th scope="col">@Html.DisplayNameFor(Model => Model.First().Nome)</th>

@@ -48,9 +48,22 @@ namespace TransportadoraLogis.Services
         {
             return _context.Clientes.FirstOrDefault( p => p.Id == id);
         }
-        public List<Cliente> getAll()
+        public List<Cliente> getAll(string busca=null, bool ordenado = false)
         {
-            return _context.Clientes.ToList();
+            List<Cliente> lista = _context.Clientes.ToList();
+            if (busca != null)
+            {
+                return lista.FindAll(a =>
+                    a.Nome.ToLower().Contains(busca.ToLower())
+                );
+            }
+
+            if (ordenado)
+            {
+                lista = lista.OrderBy(p => p.Nome).ToList();
+                return lista;
+            }
+            return lista;
         }
         public bool update(Cliente cliente)
         {

@@ -4,23 +4,23 @@
     <h1 class="display-5">Detalhes do Cliente</h1>
 </div>
 
-<dl class="row">
-    <dd class="col-sm-3">@Html.DisplayNameFor(Model => Model.Nome)</dd>
-    <dt class="col-sm-9">
-        <p>@Html.DisplayFor(Model => Model.Nome)</p>
-    </dt>
-
-    <dd class="col-sm-3">@Html.DisplayNameFor(Model => Model.Cidade)</dd>
-    <dt class="col-sm-9">
-        <p>@Html.DisplayFor(Model => Model.Cidade)</p>
-
-    <dd class="col-sm-3">@Html.DisplayNameFor(Model => Model.Telefone)</dd>
-    <dt class="col-sm-9">
-        <p>@Html.DisplayFor(Model => Model.Telefone)</p>
-    </dt>
-
-    <dd class="col-sm-3">@Html.DisplayNameFor(Model => Model.eMail)</dd>
-    <dt class="col-sm-9">
-        <p>@Html.DisplayFor(Model => Model.eMail)</p>
-    </dt>
-</dl>
+<table class="table table-bordered border-secondary border-2">
+    <tbody>
+        <tr>
+            <th scope="row">@Html.DisplayNameFor(Model => Model.Nome)</th>
+            <td>@Html.DisplayFor(Model => Model.Nome)</td>
+        </tr>
+        <tr>
+            <th scope="row">@Html.DisplayNameFor(Model => Model.Cidade)</th>
+            <td>@Html.DisplayFor(Model => Model.Cidade)</td>
+        </tr>
+        <tr>
+            <th scope="row">@Html.DisplayNameFor(Model => Model.Telefone)</th>
+            <td>@Html.DisplayFor(Model => Model.Telefone)</td>
+        </tr>
+        <tr>
+            <th scope="row">@Html.DisplayNameFor(Model => Model.eMail)</th>
+            <td>@Html.DisplayFor(Model => Model.eMail)</td>
+        </tr>
+    </tbody>
+</table>

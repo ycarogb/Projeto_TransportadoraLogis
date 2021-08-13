@@ -1,29 +1,29 @@
 ﻿@model List<Produto>
 
-<form>
-    <input type="text" name="nome" />
-    <input type="submit" value="Buscar!" />
-</form>
 
-<div class="row">
-    <div class="text-center">
-        <a class="btn btn-secondary btn-lg" asp-controller="Produto" asp-action="create">Inserir Produto</a>
-    </div>
+<div class="cont1" style="padding-bottom:5px">
+    <form>
+        <label for="cliente" style="margin-right: 4px"><strong>Localizar produtos</strong></label>
+        <input type="text" name="cliente" placeholder="--Nome do cliente--" />
+        <input type="submit" value="Buscar" />
+    </form>
 
-<div class="col">
+    <a class="btn btn-secondary btn-lg" asp-controller="Produto" asp-action="create">Inserir Produto</a>
+
     @if (ViewBag.ordenado == true)
     {
-        <a class="btn btn-secondary btn-lg" asp-action="Produto">Remover ordenação</a>
+        <a class="btn btn-secondary btn-lg" asp-action="Produtos">Remover ordenação</a>
     }
     else
     {
-        <a class="btn btn-secondary btn-lg" href="?ordenar=true">Ordenar por Cliente</a>
+        <a class="btn btn-secondary btn-lg" href="?ordenado=true">Ordenar por Cliente</a>
     }
 </div>
-</div>
+
+<hr />
 
 
-<table class="table table-striped">
+<table class="table table-striped table-hover">
     <thead>
         <tr>
             <th scope="col">@Html.DisplayNameFor(Model => Model.First().Codigo)</th>

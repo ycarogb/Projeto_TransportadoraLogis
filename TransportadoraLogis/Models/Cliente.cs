@@ -14,11 +14,10 @@ namespace TransportadoraLogis.Models
         [Display(Name = "Nome do Cliente")]
         public string Nome { get; set; }
         public string Cidade { get; set; }
+
+        [Display(Name = "E-mail")]
         public string eMail { get; set; }
         public string Telefone { get; set; }
-
-        [NotMapped]
-        public List<Produto> produtos { get; set; }
 
     }
 }

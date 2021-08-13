@@ -37,7 +37,7 @@ namespace TransportadoraLogis.Services
 
         public Produto get(int? id)
         {
-            return context.Produto.Find(id);
+            return context.Produto.Include(c => c.cliente).FirstOrDefault(x => x.Id ==id);
         }
 
         public bool create(Produto produto)

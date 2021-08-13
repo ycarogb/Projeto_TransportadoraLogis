@@ -20,9 +20,9 @@ namespace TransportadoraLogis.Controllers
             _produtoService = produtoService;
         }
 
-        public IActionResult Clientes()
+        public IActionResult Clientes(string busca, bool ordenado)
         {
-            return View(_service.getAll());    
+            return View(_service.getAll(busca, ordenado));
         }
 
         [HttpGet]

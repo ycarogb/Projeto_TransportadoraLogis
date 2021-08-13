@@ -11,7 +11,7 @@ namespace TransportadoraLogis.Services
         public bool create(Cliente cliente);
         public bool delete(int id);
         public Cliente get(int id);
-        public List<Cliente> getAll();
+        public List<Cliente> getAll(string busca= null, bool ordenado=false);
         public bool update(Cliente cliente);
     }
 }
