@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\TransportadoraLogis.csproj": {}
+    "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\TransportadoraLogis.csproj": {}
   },
   "projects": {
-    "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\TransportadoraLogis.csproj": {
+    "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\TransportadoraLogis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\TransportadoraLogis.csproj",
+        "projectUniqueName": "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\TransportadoraLogis.csproj",
         "projectName": "TransportadoraLogis",
-        "projectPath": "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\TransportadoraLogis.csproj",
+        "projectPath": "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\TransportadoraLogis.csproj",
         "packagesPath": "C:\\Users\\Cliente\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\obj\\",
+        "outputPath": "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Cliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,23 +40,39 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[5.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[5.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[5.0.9, )"
             }
           },
           "imports": [

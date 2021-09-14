@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TransportadoraLogis.Data;
+using TransportadoraLogis.Hubs;
+using TransportadoraLogis.Models;
 using TransportadoraLogis.Services;
 
 namespace TransportadoraLogis
@@ -26,11 +28,19 @@ namespace TransportadoraLogis
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews();
 
             services.AddDbContext<ProdutoContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ProdutoString"))
                 );
+
+            services.AddDefaultIdentity<AppUser>().AddEntityFrameworkStores<ProdutoContext>();
+
+            services.AddSignalR(options =>
+            {
+                options.EnableDetailedErrors = true;
+            });
 
             services.AddTransient<IProdutoServices, ProdutoSqlService>();
             services.AddTransient<IClienteService, ClienteService>();
@@ -55,6 +65,7 @@ namespace TransportadoraLogis
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -62,6 +73,8 @@ namespace TransportadoraLogis
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
+                endpoints.MapHub<ChatHub>("/chathub");
             });
         }
     }
