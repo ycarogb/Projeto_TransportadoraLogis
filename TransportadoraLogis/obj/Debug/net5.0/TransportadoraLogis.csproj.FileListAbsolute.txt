@@ -385,8 +385,6 @@ C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\Transpo
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -465,14 +463,11 @@ C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\Transpo
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
-C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -1158,3 +1153,18 @@ C:\Projetos BLUE\M4_BackEnd2\Projeto_TransportadoraLogisChat\TransportadoraLogis
 C:\Projetos BLUE\M4_BackEnd2\Projeto_TransportadoraLogisChat\TransportadoraLogis\obj\Debug\net5.0\TransportadoraLogis.genruntimeconfig.cache
 C:\Projetos BLUE\M4_BackEnd2\Projeto_TransportadoraLogisChat\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\Index.cshtml.g.cs
 C:\Projetos BLUE\M4_BackEnd2\Projeto_TransportadoraLogisChat\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Projetos BLUE\M4_BackEnd2\Projeto_TransportadoraLogisChat\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\Private.cshtml.g.cs
+C:\Projetos BLUE\M4_BackEnd2\Projeto_TransportadoraLogisChat\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\PrivateMessage.cshtml.g.cs
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\TransportadoraLogis.StaticWebAssets.xml
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\Index.cshtml.g.cs
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\Private.cshtml.g.cs
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\PrivateMessage.cshtml.g.cs
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs

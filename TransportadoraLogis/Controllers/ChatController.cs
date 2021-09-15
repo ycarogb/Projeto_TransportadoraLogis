@@ -25,7 +25,7 @@ namespace TransportadoraLogis.Controllers
         {
             var currentUser = await _userManager.GetUserAsync(User);
             ViewBag.CurrentUserName = currentUser.UserName;
-            ViewBag.Messages = _context.Messages.ToList();
+            ViewBag.Messages = _context.Messages.Where(m => m.TargetName == null).ToList();
             return View();
         }
 
@@ -46,6 +46,29 @@ namespace TransportadoraLogis.Controllers
             await chat.Clients.All.SendAsync("RecieveMessage", message);
 
             return Ok();
+        }
+
+        public async Task<IActionResult> Private()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            List<IdentityUser> allUsers = _context.Users.Where(u => u.UserName != currentUser.UserName).ToList();
+            return View(allUsers);
+        }
+
+        public async Task<IActionResult> PrivateMessage(string id)
+        {
+            var current = await _userManager.GetUserAsync(User);
+            var target = await _userManager.FindByNameAsync(id);
+
+            var sentMessages = _context.Messages.Where(m => m.UserName == current.UserName && m.TargetName == target.UserName).ToList();
+            var receivedMessages = _context.Messages.Where(m => m.UserName == target.UserName && m.TargetName == current.UserName).ToList();
+            var messages = sentMessages.Concat(receivedMessages).ToList();
+
+            ViewBag.Messages = messages;
+            ViewBag.CurrentUser = current;
+            ViewBag.TargetUser = target;
+
+            return View();
         }
 
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XIK7NrnQzLkkyzOD2w68/rtcoclRCh7nFLOeKJnrKNWstTSbM3VCBrvWBYk0yMDZoo0Smy110v9wvdxGkDZDCw==",
+  "dgSpecHash": "gMaflhc1MkZF6mLLqO9Va6UrQ0spLgVzePwNOOJkDwcZiDl0FJTciYr3PfC0sGAvJVvbzDdmNC58hj8mkRJV8A==",
   "success": true,
-  "projectFilePath": "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\TransportadoraLogis.csproj",
+  "projectFilePath": "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\TransportadoraLogis.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cliente\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Cliente\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

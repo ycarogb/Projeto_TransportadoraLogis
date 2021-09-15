@@ -1,8 +1,10 @@
 ﻿@model Message
 @{
     var messages = ViewBag.Messages as List<Message>;
-    var username = ViewBag.CurrentUserName as string;
-    var privateMessageUrl = "/Chat/PrivateMessage/";
+    var current = ViewBag.CurrentUser as AppUser;
+    var username = current.UserName;
+    var target = ViewBag.TargetUser as AppUser;
+    var targetname = target.UserName;
 }
 
 <style>
@@ -22,7 +24,7 @@
         }
 </style>
 
-<h2>Chat da Transportadora Logis</h2>
+<h2>Chat com @targetname</h2>
 <div class="jumbotron bg-light chat" id="chat">
     @if (messages != null)
     {
@@ -43,7 +45,6 @@
         }
     }
 </div>
-
 <form asp-action="SendMessage" id="SendMessageForm" class="row">
     <div class="input-group mb-4 col-md-12">
         <input name="Text" id="MessageText" class="form-control" />
@@ -55,14 +56,15 @@
 {
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.7/signalr.min.js"></script>
-
     <script>
         var username = "@username";
-        var privateUrl = "@privateMessageUrl";
+        var targetname = "@targetname";
+
         var objDiv = document.getElementById("chat");
         objDiv.scrollTop = objDiv.scrollHeight;
 
         var connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
+
         function formatDate(dateString) {
             var date = new Date(Date.parse(dateString))
             var dateStr =
@@ -73,7 +75,8 @@
             return dateStr
         }
 
-        connection.on("ReceiveMessage", (data) => {
+        //Disable send button until connection is established
+        connection.on("PrivateMessage", (data) => {
             var position = data.userName === username ? "text-right" : "text-left";
             var alert = data.userName === username ? "alert-info" : "alert-secondary";
 
@@ -83,9 +86,8 @@
             var messageCol = document.createElement("div");
             messageCol.classList = "col-md-12 " + position
 
-            var messageUser = document.createElement("a")
-            messageUser.className = "small text-dark"
-            messageUser.href = privateUrl + data.userName
+            var messageUser = document.createElement("small")
+            messageUser.className = "text-dark"
             messageUser.textContent = data.userName
 
             var messageAlert = document.createElement("div")
@@ -110,23 +112,28 @@
         });
 
         connection.start().then(function () {
-            console.log("Connected")
+            connection.invoke('joinPrivate', targetname);
             document.getElementById("SendMessageForm").addEventListener("submit", function (event) {
                 event.preventDefault();
 
                 var data = {
                     Text: document.getElementById("MessageText").value,
-                    UserName: username
+                    UserName: username,
+                    TargetName: targetname
                 }
+                console.log(data);
 
                 document.getElementById("MessageText").value = ""
-                connection.invoke("sendMessage", data).catch(function (err) {
+                connection.invoke("sendPrivateMessage", data).catch(function (err) {
                     return console.error(err.toString());
                 });
             });
         }).catch(function (err) {
             return console.error(err.toString());
         });
+
+        window.addEventListener('onunload', function () {
+            connection.invoke('leavePrivate', targetname);
+        })
     </script>
 }
-

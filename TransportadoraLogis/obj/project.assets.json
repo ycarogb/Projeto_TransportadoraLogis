@@ -7140,11 +7140,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\TransportadoraLogis.csproj",
+      "projectUniqueName": "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\TransportadoraLogis.csproj",
       "projectName": "TransportadoraLogis",
-      "projectPath": "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\TransportadoraLogis.csproj",
+      "projectPath": "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\TransportadoraLogis.csproj",
       "packagesPath": "C:\\Users\\Cliente\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos BLUE\\M4_BackEnd2\\Projeto_TransportadoraLogisChat\\TransportadoraLogis\\obj\\",
+      "outputPath": "C:\\Projetos BLUE\\M3_BackEnd 1\\TransportadoraLogis_V1\\TransportadoraLogis\\TransportadoraLogis\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
