@@ -5,7 +5,7 @@
 
 Aplicação web para gerenciamento de Produtos e Clientes da empresa fictícia TransportadoraLogis
 
-[![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Generic badge](https://img.shields.io/badge/Version-1.0-<COLOR>.svg)](https://shields.io/)
+[![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Generic badge](https://img.shields.io/badge/Version-2.0-<COLOR>.svg)](https://shields.io/)
 
 <h4 align="center"> 
 	Projeto concluído  :white_check_mark:
