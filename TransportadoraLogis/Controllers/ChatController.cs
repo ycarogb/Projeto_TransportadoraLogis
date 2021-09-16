@@ -24,6 +24,7 @@ namespace TransportadoraLogis.Controllers
         public async Task<IActionResult> Index()
         {
             var currentUser = await _userManager.GetUserAsync(User);
+            ViewBag.CurrentUser = currentUser;
             ViewBag.CurrentUserName = currentUser.UserName;
             ViewBag.Messages = _context.Messages.Where(m => m.TargetName == null).ToList();
             return View();

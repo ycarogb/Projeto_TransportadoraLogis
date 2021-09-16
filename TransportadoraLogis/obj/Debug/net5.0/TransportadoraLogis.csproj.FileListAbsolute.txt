@@ -1168,3 +1168,5 @@ C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\Transpo
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\Private.cshtml.g.cs
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Chat\PrivateMessage.cshtml.g.cs
 C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Shared\_LoginChat.cshtml.g.cs
+C:\Projetos BLUE\M3_BackEnd 1\TransportadoraLogis_V1\TransportadoraLogis\TransportadoraLogis\obj\Debug\net5.0\Razor\Views\Shared\_LoginChatNav.cshtml.g.cs

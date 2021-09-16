@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <a class="btn btn-secondary btn-lg font-weight-bold" asp-controller="Chat" asp-action="Index">Chat Público</a>
+
+    <a class="btn btn-secondary btn-lg font-weight-bold" asp-controller="Chat" asp-action="Private">Chat Privado</a>
+}
